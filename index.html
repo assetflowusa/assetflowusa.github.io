@@ -1,286 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asset Flow USA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Asset Flow USA | Digital Solutions</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box}
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
+margin:0;
+font-family:Arial,sans-serif;
+color:#132033;
+background:#f7f9fc;
+line-height:1.6
 }
 
-header{
-  background:linear-gradient(135deg,#0b1f3a,#1557a6);
-  color:white;
-  text-align:center;
-  padding:55px 20px;
+a{text-decoration:none;color:inherit}
+
+.nav{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #e7ebf2;
+z-index:10
 }
 
-header h1{
-  font-size:42px;
-  margin-bottom:10px;
+.navin{
+max-width:1100px;
+margin:auto;
+padding:16px 22px;
+display:flex;
+justify-content:space-between
 }
 
-header p{
-  font-size:18px;
+.logo{
+font-size:23px;
+font-weight:800
 }
 
-nav{
-  background:white;
-  padding:15px;
-  text-align:center;
-  box-shadow:0 2px 10px #ddd;
+.logo span{color:#1769ff}
+
+.links{
+display:flex;
+gap:22px
 }
 
-nav a{
-  color:#17345f;
-  text-decoration:none;
-  margin:0 12px;
-  font-weight:bold;
+.hero{
+background:linear-gradient(135deg,#0d1b34,#1769ff);
+color:#fff
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:50px 20px;
+.heroin{
+max-width:1100px;
+margin:auto;
+padding:95px 22px
 }
 
-.section-title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:30px;
-  color:#12345d;
+.badge{
+padding:7px 12px;
+border:1px solid #ffffff45;
+border-radius:30px
 }
 
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+h1{
+font-size:clamp(42px,7vw,72px);
+line-height:1.05;
+margin:20px 0;
+max-width:780px
 }
 
-.card{
-  background:white;
-  padding:30px 22px;
-  border-radius:16px;
-  text-align:center;
-  box-shadow:0 5px 20px #ddd;
-}
-
-.icon{
-  font-size:45px;
-  margin-bottom:15px;
-}
-
-.card h3{
-  color:#1557a6;
-  margin-bottom:10px;
+.hero p{
+max-width:650px;
+font-size:18px;
+color:#dce8ff
 }
 
 .btn{
-  display:inline-block;
-  margin-top:18px;
-  padding:12px 22px;
-  border-radius:8px;
-  background:#1557a6;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
+display:inline-block;
+padding:13px 20px;
+border-radius:9px;
+background:#fff;
+color:#1357d4;
+font-weight:700;
+margin:12px 8px 0 0
 }
 
-.btn:hover{
-  opacity:.85;
+.btn.alt{
+background:#ffffff16;
+color:#fff;
+border:1px solid #ffffff45
 }
 
-.contact-box{
-  background:white;
-  padding:35px 25px;
-  border-radius:16px;
-  text-align:center;
-  box-shadow:0 5px 20px #ddd;
+section{
+max-width:1100px;
+margin:auto;
+padding:75px 22px
 }
 
-.contact-box h2{
-  color:#12345d;
-  margin-bottom:15px;
+.eyebrow{
+color:#1769ff;
+font-weight:800;
+font-size:13px;
+text-transform:uppercase;
+letter-spacing:1px
 }
 
-.contact-box p{
-  margin:15px 0;
+h2{
+font-size:36px;
+margin:8px 0 14px
 }
 
-.contact-box a{
-  color:#1557a6;
-  font-weight:bold;
-  text-decoration:none;
+.intro{
+max-width:650px;
+color:#667085
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:30px
+}
+
+.card{
+background:#fff;
+border:1px solid #e7ebf2;
+border-radius:16px;
+padding:26px;
+box-shadow:0 8px 25px #13203308
+}
+
+.icon{font-size:28px}
+
+.card h3{
+margin:10px 0 5px
+}
+
+.card p{
+color:#667085;
+font-size:14px
+}
+
+.about{
+background:#eef4ff;
+max-width:none
+}
+
+.aboutin,
+.contactin{
+max-width:1100px;
+margin:auto;
+padding:75px 22px
+}
+
+.contact{
+background:#0d1b34;
+color:#fff;
+max-width:none
+}
+
+.contact p{
+color:#cbd7ed
+}
+
+.contactbox{
+margin-top:25px;
+background:#ffffff10;
+border:1px solid #ffffff20;
+padding:25px;
+border-radius:15px;
+max-width:620px
 }
 
 footer{
-  background:#0b1f3a;
-  color:white;
-  text-align:center;
-  padding:25px;
-  margin-top:30px;
+background:#091326;
+color:#aebbd0;
+text-align:center;
+padding:25px;
+font-size:13px
+}
+
+@media(max-width:700px){
+
+.links{
+display:none
+}
+
+.grid{
+grid-template-columns:1fr
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Asset Flow USA</h1>
-<p>Professional Digital Support & Assistance</p>
-</header>
+<nav class="nav">
 
-<nav>
+<div class="navin">
+
+<div class="logo">
+Asset Flow<span>USA</span>
+</div>
+
+<div class="links">
+
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
 </nav>
 
-<section id="contact" class="container">
 
-<h2 class="section-title">Contact Us</h2>
+<header class="hero">
 
-<div class="services">
+<div class="heroin">
+
+<span class="badge">
+Gmail & Digital Support Services
+</span>
+
+<h1>
+Build your business for the digital world.
+</h1>
+
+<p>
+Asset Flow USA provides Gmail-focused support and practical digital services
+for customers who need reliable online assistance.
+</p>
+
+<a class="btn" href="#contact">
+Get Started
+</a>
+
+<a class="btn alt" href="#services">
+Explore Services
+</a>
+
+</div>
+
+</header>
+
+
+<section id="services">
+
+<div class="eyebrow">
+What we do
+</div>
+
+<h2>
+Our Services
+</h2>
+
+<p class="intro">
+Flexible digital services designed to help businesses present themselves professionally online.
+</p>
+
+<div class="grid">
 
 <div class="card">
 <div class="icon">📧</div>
-<h3>Email Us</h3>
-<p>assetflowusa@gmail.com</p>
-<a class="btn" href="mailto:assetflowusa@gmail.com">
+<h3>Gmail Support</h3>
+<p>
+Guidance and support for common Gmail-related needs and account issues.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Account Security</h3>
+<p>
+General guidance for improving account security and protecting your online presence.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>Digital Assistance</h3>
+<p>
+Practical help with everyday digital services and online tasks.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile Support</h3>
+<p>
+Mobile-friendly assistance for customers using phones and other devices.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💬</div>
+<h3>Customer Support</h3>
+<p>
+Contact us through WhatsApp or Telegram to discuss your support needs.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Digital Guidance</h3>
+<p>
+Clear, practical recommendations based on your digital needs.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="about" id="about">
+
+<div class="aboutin">
+
+<div class="eyebrow">
+About Asset Flow USA
+</div>
+
+<h2>
+Technology made simpler.
+</h2>
+
+<p class="intro">
+We focus on practical digital solutions that help businesses communicate clearly,
+look professional and build a stronger presence online.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="contact" id="contact">
+
+<div class="contactin">
+
+<div class="eyebrow" style="color:#8db5ff">
+Let's connect
+</div>
+
+<h2>
+Ready to start?
+</h2>
+
+<p>
+Tell us what you need and we'll discuss the next step.
+</p>
+
+<div class="contactbox">
+
+<p>
+<strong>Email:</strong> assetflowusa@gmail.com
+</p>
+
+<p>
+<strong>WhatsApp:</strong> +1 570 612 2507
+</p>
+
+<p>
+<strong>Telegram:</strong> @AssetFlow_USA
+</p>
+
+<a class="btn"
+href="mailto:assetflowusa@gmail.com">
 Email Us
 </a>
-</div>
 
-<div class="card">
-<div class="icon">💬</div>
-<h3>WhatsApp</h3>
-<p>+1 570 612 2507</p>
-<a class="btn" href="https://wa.me/15706122507" target="_blank">
+<a class="btn"
+href="https://wa.me/15706122507"
+target="_blank"
+rel="noopener">
 WhatsApp
 </a>
-</div>
 
-<div class="card">
-<div class="icon">✈️</div>
-<h3>Telegram</h3>
-<p>@AssetFlow_USA</p>
-<a class="btn" href="https://t.me/AssetFlow_USA" target="_blank">
+<a class="btn alt"
+href="https://t.me/AssetFlow_USA"
+target="_blank"
+rel="noopener">
 Telegram
 </a>
+
+</div>
+
 </div>
 
 </div>
 
-</section>
-
-<h2 class="section-title">Our Services</h2>
-
-<div class="services">
-
-<div class="card">
-<div class="icon">📧</div>
-<h3>Gmail Service</h3>
-<p>Professional assistance and guidance for Gmail-related digital needs.</p>
-</div>
-
-<div class="card">
-<div class="icon">💳</div>
-<h3>PayPal Service</h3>
-<p>Guidance and assistance for PayPal account and digital payment services.</p>
-</div>
-
-<div class="card">
-<div class="icon">💼</div>
-<h3>LinkedIn Service</h3>
-<p>Professional support and guidance for LinkedIn-related services.</p>
-</div>
-
-<div class="card">
-<div class="icon">🔎</div>
-<h3>Indeed Service</h3>
-<p>Assistance and guidance for Indeed and online employment services.</p>
-</div>
-
-<div class="card">
-<div class="icon">💬</div>
-<h3>WhatsApp</h3>
-<p>Contact us directly through WhatsApp.</p>
-<a class="btn" href="https://wa.me/15706122507" target="_blank">
-Chat on WhatsApp
-</a>
-</div>
-
-<div class="card">
-<div class="icon">✈️</div>
-<h3>Telegram</h3>
-<p>Contact us directly through Telegram.</p>
-<a class="btn" href="https://t.me/AssetFlow_USA" target="_blank">
-Chat on Telegram
-</a>
-</div>
-
-</div>
-</section>
-
-<section id="about" class="container">
-
-<h2 class="section-title">About Asset Flow USA</h2>
-
-<div class="card">
-<p>
-Asset Flow USA provides professional digital assistance and support
-for online platforms and services. Our goal is to provide simple,
-clear and reliable digital guidance.
-</p>
-</div>
-
-</section>
-
-<section id="contact" class="container">
-
-<div class="contact-box">
-
-<h2>Contact Us</h2>
-
-<p>Get in touch with Asset Flow USA.</p>
-
-<p>
-📧 Email:
-<a href="mailto:assetflowusa@gmail.com">
-assetflowusa@gmail.com
-</a>
-</p>
-
-<p>
-💬 WhatsApp:
-<a href="https://wa.me/15706122507" target="_blank">
-+1 570 612 2507
-</a>
-</p>
-
-<p>
-✈️ Telegram:
-<a href="https://t.me/AssetFlow_USA" target="_blank">
-@AssetFlow_USA
-</a>
-</p>
-
-</div>
-
-</section>
 
 <footer>
-<p>© 2026 Asset Flow USA. All Rights Reserved.</p>
+© 2026 Asset Flow USA. All rights reserved.
 </footer>
 
 </body>
